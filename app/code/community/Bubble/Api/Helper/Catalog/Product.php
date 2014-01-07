@@ -27,7 +27,7 @@ class Bubble_Api_Helper_Catalog_Product extends Mage_Core_Helper_Abstract
 
             if (!empty($usedProductIds)) {
                 if ($product->isConfigurable()) {
-                    $this->_initConfigurableAttributesData($product, $usedProductIds, $priceChanges, $configurableAttributes);
+                    $this->_initConfigurableAttributesData($product, $newProductIds, $priceChanges, $configurableAttributes);
                 } elseif ($product->isGrouped()) {
                     $relations = array_fill_keys($usedProductIds, array('qty' => 0, 'position' => 0));
                     $product->setGroupedLinkData($relations);
